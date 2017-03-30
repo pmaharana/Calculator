@@ -25,10 +25,11 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void TestClick(object sender, RoutedEventArgs e)
+        private void AdditionButton(object sender, RoutedEventArgs e)
         {
+            
             int result = Int32.Parse(Value1.Text) + Int32.Parse(Value2.Text);
-            Calculation. = result.ToString();
+            Calculation.Content = result.ToString();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
