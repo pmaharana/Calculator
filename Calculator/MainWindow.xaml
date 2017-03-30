@@ -9,13 +9,13 @@
     <Grid>
         
         <Label Content="Calculation goes here" Name="Calculation" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="6.007,10.634" Margin="175,247,0,0" Height="43" Width="129"/>
-        <TextBox x:Name="Value1" HorizontalAlignment="Left" Height="36" Margin="156,29,0,0" TextWrapping="Wrap" Text="Enter Number" VerticalAlignment="Top" Width="168" />
+        <TextBox x:Name="Value1" HorizontalAlignment="Left" Height="36" Margin="156,29,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="168" TextChanged="Value1_TextChanged" />
         <Button x:Name="Addition" Content="+" HorizontalAlignment="Left" Margin="57,96,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="AdditionButton" Background="#FFCAAFAF"/>
-        <Button Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" RenderTransformOrigin="1.257,2.77" Margin="130,96,0,0" Height="50"/>
-        <Button Content="*" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="196,96,0,0" Height="50"/>
-        <Button Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="271,96,0,0" Height="50"/>
-        <Button Content="%" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="348,96,0,0" Height="50" Click="AdditionButton"/>
-        <TextBox x:Name="Value2" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="Enter Number" VerticalAlignment="Top" Width="148" RenderTransformOrigin="1.882,10.609" Margin="166,175,0,0"/>
+        <Button x:Name="Subtraction" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" RenderTransformOrigin="1.257,2.77" Margin="130,96,0,0" Height="50" Click="SubtractionButton"/>
+        <Button x:Name="Multiplication" Content="*" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="196,96,0,0" Height="50" Click="MultiplicationButton"/>
+        <Button x:Name="Division" Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="271,96,0,0" Height="50" Click="DivisionButton"/>
+        <Button x:Name="Percentage" Content="%" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="348,96,0,0" Height="50" Click="PercentageButton"/>
+        <TextBox x:Name="Value2" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="1.882,10.609" Margin="166,175,0,0" TextChanged="Value2_TextChanged"/>
 
     </Grid>
 </Window>

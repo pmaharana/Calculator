@@ -27,17 +27,36 @@ namespace Calculator
 
         private void AdditionButton(object sender, RoutedEventArgs e)
         {
-            
             int result = Int32.Parse(Value1.Text) + Int32.Parse(Value2.Text);
             Calculation.Content = result.ToString();
         }
+        private void SubtractionButton(object sender, RoutedEventArgs e)
+        {
+            int result = Int32.Parse(Value1.Text) - Int32.Parse(Value2.Text);
+            Calculation.Content = result.ToString();
+        }
+        private void MultiplicationButton(object sender, RoutedEventArgs e)
+        {
+            int result = Int32.Parse(Value1.Text) * Int32.Parse(Value2.Text);
+            Calculation.Content = result.ToString();
+        }
+        private void DivisionButton(object sender, RoutedEventArgs e)
+        {
+            int result = Int32.Parse(Value1.Text) / Int32.Parse(Value2.Text);
+            Calculation.Content = result.ToString();
+        }
+        private void PercentageButton(object sender, RoutedEventArgs e)
+        {
+            int result = Int32.Parse(Value1.Text) % Int32.Parse(Value2.Text);
+            Calculation.Content = result.ToString();
+        }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Value1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void NumberInput1(object sender, TextChangedEventArgs e)
+        private void Value2_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
