@@ -78,6 +78,10 @@ namespace Calculator
             Result.Text += "9";
         }
 
+        private void DecimalClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += ".";
+        }
         private void PlusClick(object sender, RoutedEventArgs e)
         {
             Result.Text += "+";
@@ -100,12 +104,52 @@ namespace Calculator
 
         private void EqualClick(object sender, RoutedEventArgs e)
         {
+            if (Result.Text.Contains('+'))
+            {
+                var splittedAdd = Result.Text.Split('+');
+                var addition = double.Parse(splittedAdd[0]) + double.Parse(splittedAdd[1]);
+                Result.Text = addition.ToString();
+            }
 
+            if (Result.Text.Contains('-'))
+            {
+                var splittedSubtract = Result.Text.Split('-');
+                var subtraction = double.Parse(splittedSubtract[0]) - double.Parse(splittedSubtract[1]);
+                Result.Text = subtraction.ToString();
+            }
+            if (Result.Text.Contains('X'))
+            {
+                var splittedMultiply = Result.Text.Split('X');
+                var multiplication = double.Parse(splittedMultiply[0]) * double.Parse(splittedMultiply[1]);
+                Result.Text = multiplication.ToString();
+            }
+            if (Result.Text.Contains('/'))
+            {
+                var splittedDivide = Result.Text.Split('/');
+                var division = double.Parse(splittedDivide[0]) / double.Parse(splittedDivide[1]);
+                Result.Text = division.ToString();
+            }
         }
-
         private void ClearAllClick(object sender, RoutedEventArgs e)
         {
             Result.Text = "";
         }
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.D1)
+            {
+                Result.Text += "1";
+            }
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }

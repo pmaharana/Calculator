@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="722" Width="445.8">
+        Title="MainWindow" Height="722" Width="445.8" KeyDown="OnKeyDownHandler">
     <Grid Margin="0,-17,3.4,28.8" RenderTransformOrigin="0.504,0.803">
         <Grid.RowDefinitions>
             <RowDefinition Height="159*"/>
@@ -40,7 +40,7 @@
         <Button x:Name="Two" Content="2" HorizontalAlignment="Left" Height="54" Margin="122,395,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Comic Sans MS" FontSize="36" Click="TwoClick"/>
         <Button x:Name="One" Content="1" HorizontalAlignment="Left" Height="54" Margin="31,395,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Footlight MT Light" FontSize="48" Click="OneClick"/>
         <Button x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="304,466,0,-12" Grid.Row="1" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="48" Click="EqualClick"/>
-        <Button x:Name="__" Content="." HorizontalAlignment="Left" Height="54" Margin="213,466,0,-12" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Segoe Script" FontSize="36"/>
+        <Button x:Name="Decimal" Content="." HorizontalAlignment="Left" Height="54" Margin="213,466,0,-12" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Segoe Script" FontSize="36" Click="DecimalClick"/>
         <Button x:Name="Zero" Content="0" HorizontalAlignment="Left" Height="54" Margin="122,466,0,-12" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Matura MT Script Capitals" FontSize="36" Click="ZeroClick"/>
         <Button Content="+/-" HorizontalAlignment="Left" Height="54" Margin="31,466,0,-12" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="36"/>
         <Button Content="1/X" HorizontalAlignment="Left" Height="54" Margin="304,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="SimSun-ExtB" FontSize="48"/>
