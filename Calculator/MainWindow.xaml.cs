@@ -25,40 +25,87 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void AdditionButton(object sender, RoutedEventArgs e)
-        {
-            int result = Int32.Parse(Value1.Text) + Int32.Parse(Value2.Text);
-            Calculation.Content = result.ToString();
-        }
-        private void SubtractionButton(object sender, RoutedEventArgs e)
-        {
-            int result = Int32.Parse(Value1.Text) - Int32.Parse(Value2.Text);
-            Calculation.Content = result.ToString();
-        }
-        private void MultiplicationButton(object sender, RoutedEventArgs e)
-        {
-            int result = Int32.Parse(Value1.Text) * Int32.Parse(Value2.Text);
-            Calculation.Content = result.ToString();
-        }
-        private void DivisionButton(object sender, RoutedEventArgs e)
-        {
-            int result = Int32.Parse(Value1.Text) / Int32.Parse(Value2.Text);
-            Calculation.Content = result.ToString();
-        }
-        private void PercentageButton(object sender, RoutedEventArgs e)
-        {
-            int result = Int32.Parse(Value1.Text) % Int32.Parse(Value2.Text);
-            Calculation.Content = result.ToString();
-        }
+       
 
-        private void Value1_TextChanged(object sender, TextChangedEventArgs e)
+      
+
+        private void Result_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void Value2_TextChanged(object sender, TextChangedEventArgs e)
+        private void ZeroClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "0";
+        }
+
+        private void OneClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "1";
+        }
+
+        private void TwoClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "2";
+        }
+
+        private void ThreeClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "3";
+        }
+        private void FourClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "4";
+        }
+        private void FiveClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "5";
+        }
+        private void SixClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "6";
+        }
+        private void SevenClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "7";
+        }
+        private void EightClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "8";
+        }
+        private void NineClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "9";
+        }
+
+        private void PlusClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "+";
+        }
+
+        private void MinusClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "-";
+        }
+
+        private void MultiplyClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "X";
+        }
+
+        private void DivideClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text += "/";
+        }
+
+        private void EqualClick(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ClearAllClick(object sender, RoutedEventArgs e)
+        {
+            Result.Text = "";
         }
     }
 }

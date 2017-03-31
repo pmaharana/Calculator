@@ -5,17 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-        <Label Content="Calculation goes here" Name="Calculation" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="6.007,10.634" Margin="175,247,0,0" Height="43" Width="129"/>
-        <TextBox x:Name="Value1" HorizontalAlignment="Left" Height="36" Margin="156,29,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="168" TextChanged="Value1_TextChanged" />
-        <Button x:Name="Addition" Content="+" HorizontalAlignment="Left" Margin="57,96,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="AdditionButton" Background="#FFCAAFAF"/>
-        <Button x:Name="Subtraction" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" RenderTransformOrigin="1.257,2.77" Margin="130,96,0,0" Height="50" Click="SubtractionButton"/>
-        <Button x:Name="Multiplication" Content="*" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="196,96,0,0" Height="50" Click="MultiplicationButton"/>
-        <Button x:Name="Division" Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="271,96,0,0" Height="50" Click="DivisionButton"/>
-        <Button x:Name="Percentage" Content="%" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Margin="348,96,0,0" Height="50" Click="PercentageButton"/>
-        <TextBox x:Name="Value2" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="1.882,10.609" Margin="166,175,0,0" TextChanged="Value2_TextChanged"/>
-
+        Title="MainWindow" Height="722" Width="445.8">
+    <Grid Margin="0,-17,3.4,28.8" RenderTransformOrigin="0.504,0.803">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="159*"/>
+            <RowDefinition Height="469*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Height="59" Margin="0,10,0,0" TextWrapping="Wrap" Text="STANDARD" VerticalAlignment="Top" Width="426" FontFamily="Snap ITC" FontSize="36"/>
+        <TextBox x:Name="Result" HorizontalAlignment="Left" Height="80" Margin="5,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" FontSize="24" FontFamily="Showcard Gothic" TextChanged="Result_TextChanged" />
+        <Button Content="MC" HorizontalAlignment="Left" Height="72" Margin="10,9.4,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" FontFamily="Vladimir Script" FontSize="40" FontWeight="Bold"/>
+        <Button Content="M-" HorizontalAlignment="Left" Height="72" Margin="268,9.4,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" FontFamily="Bradley Hand ITC" FontSize="36" FontWeight="Bold"/>
+        <Button Content="M+" HorizontalAlignment="Left" Height="72" Margin="182,9.4,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" FontFamily="Blackadder ITC" FontSize="36" FontWeight="Bold"/>
+        <Button Content="MR" HorizontalAlignment="Left" Height="72" Margin="96,9.4,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" RenderTransformOrigin="1.82,0.532" FontFamily="Viner Hand ITC" FontSize="36" FontWeight="Bold"/>
+        <Button Content="MM" HorizontalAlignment="Left" Height="72" Margin="354,9.4,0,0" VerticalAlignment="Top" Width="81" Grid.Row="1" FontFamily="French Script MT" FontSize="36" FontWeight="Bold"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+        <Button Content="1/X" HorizontalAlignment="Left" Height="54" Margin="304,98.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="SimSun-ExtB" FontSize="48"/>
+        <Button Content="X^2" HorizontalAlignment="Left" Height="54" Margin="213,98.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Onyx" FontSize="36" FontWeight="Bold"/>
+        <Button Content="SQ Root" HorizontalAlignment="Left" Height="54" Margin="122,98.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="18"/>
+        <Button Content="%" HorizontalAlignment="Left" Height="54" Margin="31,98.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Showcard Gothic" FontSize="36"/>
+        <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" Height="54" Margin="304,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="36" Click="DivideClick"/>
+        <Button Content="BACK" HorizontalAlignment="Left" Height="54" Margin="213,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Ravie" FontSize="24"/>
+        <Button Content="C" HorizontalAlignment="Left" Height="54" Margin="122,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Mistral" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="ClearAll" Content="CE" HorizontalAlignment="Left" Height="54" Margin="31,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="SimSun-ExtB" FontSize="36" FontWeight="Bold" Click="ClearAllClick"/>
+        <Button x:Name="Multiply" Content="X" HorizontalAlignment="Left" Height="54" Margin="304,243,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Papyrus" FontSize="36" FontWeight="Bold" Click="MultiplyClick"/>
+        <Button x:Name="Nine" Content="9" HorizontalAlignment="Left" Height="54" Margin="213,243,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="36" Click="NineClick"/>
+        <Button x:Name="Eight" Content="8" HorizontalAlignment="Left" Height="54" Margin="122,243,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Ravie" FontSize="36" Click="EightClick"/>
+        <Button x:Name="Seven" Content="7" HorizontalAlignment="Left" Height="54" Margin="31,243,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Showcard Gothic" FontSize="36" Click="SevenClick"/>
+        <Button x:Name="Minus" Content="-" HorizontalAlignment="Left" Height="54" Margin="304,316,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Franklin Gothic Medium Cond" FontSize="48" Click="MinusClick"/>
+        <Button x:Name="Six" Content="6" HorizontalAlignment="Left" Height="54" Margin="213,316,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Magneto" FontSize="36" FontWeight="Bold" Click="SixClick"/>
+        <Button x:Name="Five" Content="5" HorizontalAlignment="Left" Height="54" Margin="122,316,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Lucida Handwriting" FontSize="36" Click="FiveClick"/>
+        <Button x:Name="Four" Content="4" HorizontalAlignment="Left" Height="54" Margin="31,316,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Showcard Gothic" FontSize="36" Click="FourClick"/>
+        <Button x:Name="Plus" Content="+" HorizontalAlignment="Left" Height="54" Margin="304,395,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Microsoft PhagsPa" FontSize="48" Click="PlusClick"/>
+        <Button x:Name="Three" Content="3" HorizontalAlignment="Left" Height="54" Margin="213,395,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Old English Text MT" FontSize="48" Click="ThreeClick"/>
+        <Button x:Name="Two" Content="2" HorizontalAlignment="Left" Height="54" Margin="122,395,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Comic Sans MS" FontSize="36" Click="TwoClick"/>
+        <Button x:Name="One" Content="1" HorizontalAlignment="Left" Height="54" Margin="31,395,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Footlight MT Light" FontSize="48" Click="OneClick"/>
+        <Button x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="304,466,0,-12" Grid.Row="1" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="48" Click="EqualClick"/>
+        <Button x:Name="__" Content="." HorizontalAlignment="Left" Height="54" Margin="213,466,0,-12" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Segoe Script" FontSize="36"/>
+        <Button x:Name="Zero" Content="0" HorizontalAlignment="Left" Height="54" Margin="122,466,0,-12" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Matura MT Script Capitals" FontSize="36" Click="ZeroClick"/>
+        <Button Content="+/-" HorizontalAlignment="Left" Height="54" Margin="31,466,0,-12" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="36"/>
+        <Button Content="1/X" HorizontalAlignment="Left" Height="54" Margin="304,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="SimSun-ExtB" FontSize="48"/>
+        <Button Content="X^2" HorizontalAlignment="Left" Height="54" Margin="213,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Onyx" FontSize="36" FontWeight="Bold"/>
+        <Button Content="SQ Root" HorizontalAlignment="Left" Height="54" Margin="122,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="18"/>
+        <Button Content="%" HorizontalAlignment="Left" Height="54" Margin="31,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Showcard Gothic" FontSize="36"/>
+        <Button Content="1/X" HorizontalAlignment="Left" Height="54" Margin="304,95,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="SimSun-ExtB" FontSize="48"/>
+        <Button Content="X^2" HorizontalAlignment="Left" Height="54" Margin="213,95,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Onyx" FontSize="36" FontWeight="Bold"/>
+        <Button Content="SQ Root" HorizontalAlignment="Left" Height="54" Margin="122,95,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontSize="18"/>
+        <Button Content="%" HorizontalAlignment="Left" Height="54" Margin="31,95,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86" RenderTransformOrigin="2.37,1.702" FontFamily="Showcard Gothic" FontSize="36"/>
     </Grid>
 </Window>
