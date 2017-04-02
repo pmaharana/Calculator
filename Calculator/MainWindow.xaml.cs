@@ -140,16 +140,51 @@ namespace Calculator
             {
                 Result.Text += "1";
             }
+            if (e.Key == Key.D2)
+            {
+                Result.Text += "2";
+            }
+            if (e.Key == Key.D3)
+            {
+                Result.Text += "3";
+            }
+            if (e.Key == Key.D4)
+            {
+                Result.Text += "4";
+            }
+            if (e.Key == Key.D5)
+            {
+                Result.Text += "5";
+            }
+            if (e.Key == Key.D6)
+            {
+                Result.Text += "6";
+            }
+            if (e.Key == Key.D7)
+            {
+                Result.Text += "7";
+            }
+            if (e.Key == Key.D8)
+            {
+                Result.Text += "8";
+            }
+            if (e.Key == Key.D9)
+            {
+                Result.Text += "9";
+            }
+            if (e.Key == Key.D0)
+            {
+                Result.Text += "0";
+            }
+            if (e.Key == Key.OemPeriod)
+            {
+                Result.Text += ".";
+            }
         }
 
-
-
-
-
-
-
-
-
-
+        private void BackSpace(object sender, RoutedEventArgs e)
+        {
+            Result.Text = Result.Text.Remove(Result.Text.Length-1);
+        }
     }
 }
